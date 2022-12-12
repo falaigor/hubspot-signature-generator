@@ -13,14 +13,18 @@ export const SignatureContainer = styled.section`
   .propertie {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
-    .button_add_propertie {
+    button {
       display: flex;
       align-items: center;
       text-align: center;
       font-size: 0.85rem;
       align-content: normal;
-
+      background: transparent;
+      border: 0;
+      padding: 0.5rem;
+      cursor: pointer;
       color: ${(props) => props.theme["green-300"]};
     }
   }
@@ -41,27 +45,6 @@ export const SignatureContainer = styled.section`
       &::placeholder {
         color: ${(props) => props.theme["gray-500"]};
       }
-    }
-  }
-
-  button {
-    border: 0;
-    background: ${(props) => props.theme["green-500"]};
-    color: ${(props) => props.theme.white};
-    font-weight: bold;
-    padding: 0.7rem;
-    border-radius: 6px;
-    cursor: pointer;
-    display: flex;
-
-    &:disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-    }
-
-    &:not(:disabled):hover {
-      background: ${(props) => props.theme["green-700"]};
-      transition: background-color 0.2s;
     }
   }
 

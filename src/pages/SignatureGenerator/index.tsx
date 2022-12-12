@@ -1,4 +1,5 @@
-import { Clipboard, CopySimple, Plus } from "phosphor-react";
+import { CopySimple, Plus } from "phosphor-react";
+import { Button } from "../../components/Button";
 import { SignatureContainer } from "./styles";
 
 export function SignatureGenerator() {
@@ -43,9 +44,9 @@ export function SignatureGenerator() {
 
         <div className="clipboard_copy">
           <input type="text" value="VALUE" id="" />
-          <button>
+          <Button>
             <CopySimple />
-          </button>
+          </Button>
         </div>
       </div>
     </SignatureContainer>
