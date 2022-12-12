@@ -1,3 +1,4 @@
+import { Clipboard, CopySimple, Plus } from "phosphor-react";
 import { SignatureContainer } from "./styles";
 
 export function SignatureGenerator() {
@@ -13,7 +14,13 @@ export function SignatureGenerator() {
           </div>
 
           <div>
-            <label>Properties</label>
+            <div className="propertie">
+              <label>Properties</label>
+              <button className="button_add_propertie">
+                <Plus />
+                Add propertie
+              </button>
+            </div>
             <input type="text" name="" id="" />
           </div>
 
@@ -34,10 +41,11 @@ export function SignatureGenerator() {
           </div>
         </form>
 
-        <div>
-          <label>HashCode</label>
+        <div className="clipboard_copy">
           <input type="text" value="VALUE" id="" />
-          <button>Copy</button>
+          <button>
+            <CopySimple />
+          </button>
         </div>
       </div>
     </SignatureContainer>

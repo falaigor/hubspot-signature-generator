@@ -10,15 +10,58 @@ export const SignatureContainer = styled.section`
     font-weight: 800;
   }
 
-  input {
-    width: 100%;
-    border-radius: 6px;
-    border: 0;
+  .propertie {
+    display: flex;
+    justify-content: space-between;
+
+    .button_add_propertie {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      font-size: 0.85rem;
+      align-content: normal;
+
+      color: ${(props) => props.theme["green-300"]};
+    }
+  }
+
+  .clipboard_copy {
+    display: flex;
+    margin-top: 1rem;
     background: ${(props) => props.theme["gray-900"]};
-    color: ${(props) => props.theme["gray-300"]};
     padding: 1rem;
-    &::placeholder {
-      color: ${(props) => props.theme["gray-500"]};
+    border-radius: 6px;
+
+    input {
+      width: 100%;
+      border: 0;
+      background: ${(props) => props.theme["gray-900"]};
+      color: ${(props) => props.theme["gray-300"]};
+
+      &::placeholder {
+        color: ${(props) => props.theme["gray-500"]};
+      }
+    }
+  }
+
+  button {
+    border: 0;
+    background: ${(props) => props.theme["green-500"]};
+    color: ${(props) => props.theme.white};
+    font-weight: bold;
+    padding: 0.7rem;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    &:not(:disabled):hover {
+      background: ${(props) => props.theme["green-700"]};
+      transition: background-color 0.2s;
     }
   }
 
@@ -39,28 +82,6 @@ export const SignatureContainer = styled.section`
       padding: 1rem;
       &::placeholder {
         color: ${(props) => props.theme["gray-500"]};
-      }
-    }
-
-    button[type="submit"] {
-      height: 58px;
-      border: 0;
-      background: ${(props) => props.theme["green-500"]};
-      color: ${(props) => props.theme.white};
-      font-weight: bold;
-      padding: 0 1.25rem;
-      border-radius: 6px;
-      margin-top: 1.5rem;
-      cursor: pointer;
-
-      &:disabled {
-        opacity: 0.5;
-        cursor: not-allowed;
-      }
-
-      &:not(:disabled):hover {
-        background: ${(props) => props.theme["green-700"]};
-        transition: background-color 0.2s;
       }
     }
   }
